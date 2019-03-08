@@ -1,5 +1,7 @@
 FROM ros:kinetic
 
+MAINTAINER robottime "robottime@yeah.net"
+
 # COPY sources.list /etc/apt/sources.list
 
 # install build tools
