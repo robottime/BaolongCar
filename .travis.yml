@@ -1,7 +1,9 @@
-sudo: true
+services:
+  - docker
 
-install:
-  - curl -sLo - http://j.mp/install-travis-docker | sh -xe
+before_install:
+  - docker build -t robottime/diff_car_driver .
+  - docker run -d robottime/diff_car_driver bash
 
 script:
-  - ./run 'docker build -t test . && docker run test bash'
+  - docker ps -a

@@ -2,8 +2,6 @@ FROM ros:kinetic
 
 MAINTAINER robottime "robottime@yeah.net"
 
-# COPY sources.list /etc/apt/sources.list
-
 # install build tools
 RUN apt-get update && apt-get install -y \
       python-catkin-tools python-pip \
