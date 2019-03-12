@@ -1,0 +1,9 @@
+services:
+  - docker
+
+before_install:
+  - docker build -t robottime/diff_car_driver .
+  - docker run -d robottime/diff_car_driver bash
+
+script:
+  - docker ps -a
